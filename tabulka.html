@@ -1,0 +1,196 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+  body {
+    max-width: 600px;
+    margin: 20 auto;
+  }
+
+  .tenis-tabulka {
+    width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    border-collapse: collapse;
+  }
+
+  #tab1 tr:nth-child(4) td, 
+  #tab1 tr:nth-child(6) td,
+  #tab2 tr:nth-child(5) td
+  {
+    border-bottom: 1px dashed black;
+  }
+
+  .tenis-tabulka td { 
+    padding-bottom: 10px;
+  }
+
+  .tenis-tabulka td:first-child {
+    font-style: italic;
+  }
+
+  .tenis-tabulka th, .tenis-tabulka td:nth-child(n+2) {
+    text-align: center;
+  }
+  
+  .smallnum {
+    font-size: 200%;
+  }
+
+  .bignum {
+    font-size: 150%;
+  }
+
+  .sub {
+    font-size: 100%;
+    white-space: nowrap;
+  }
+
+  .bold {
+    font-weight: bold;
+    font-size: 110%;
+  }
+
+  .smallbr {
+    display: block;
+    margin: -5px 0;
+  }
+
+  .aotitle {
+    font-size: 120%;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .tenis-tabulka img {
+      display: none;
+    }
+
+    .sub {
+      white-space: initial;
+    }
+  }
+</style>
+</head>
+<body>
+  <table class="tenis-tabulka" id="tab1">
+    <tr>
+      <th></th>
+      <th>
+        <img 
+          src="https://1gr.cz/fotky/idnes/19/012/cl6/DM78c5ff_304856b3c149418ab38dae53be94eff5_0.jpg"
+          height="150px"><br>
+          Petra Kvitová
+      </th>
+      <th>
+        <img 
+          src="https://www.wtatennis.com/sites/default/files/styles/highlight_news_mobile_1_33_1_2x/public/dsc_7391_original.jpg"
+          height="150px"><br>
+        Naomi Ósaka
+      </th>
+    </tr>
+    <tr>
+      <td>WTA tituly</td>
+      <td class="smallnum">26</td>
+      <td class="smallnum">2</td>
+    </tr>
+    <tr>
+      <td>Grandslamové tituly</td>
+      <td class="smallnum">2</td>
+      <td class="smallnum">1</td>
+    </tr>
+    <tr>
+      <td>Prize money</td>
+      <td class="bignum">27 496 787 $</td>
+      <td class="bignum">7 682 282 $</td>
+    </tr>
+    <tr>
+      <td>Věk</td>
+      <td><span class="smallnum">28</span><br class="smallbr"><span class="bignum">let</span></td>
+      <td><span class="smallnum">21</span><br class="smallbr"><span class="bignum">let</span></td>
+    </tr>
+    <tr>
+        <td>Výška</td>
+        <td><span class="smallnum">182</span><br class="smallbr"><span class="bignum">cm</span></td>
+        <td><span class="smallnum">180</span><br class="smallbr"><span class="bignum">cm</span></td>
+    </tr>
+    <tr>
+        <td>Bilance 2019</td>
+        <td>
+          <span class="smallnum">8</span><br class="smallbr"><span class="bignum">výher</span><br>
+          <span class="sub">1 prohra</span>
+        </td>
+        <td>
+            <span class="smallnum">12</span><br class="smallbr"><span class="bignum">výher</span><br>
+            <span class="sub">1 prohra</span>
+        </td>
+    </tr>
+    </table>
+
+    <div></div>
+
+    <table class="tenis-tabulka" id="tab2">
+    <tr>
+      <th></th>
+      <th colspan="2" class="aotitle">Australian Open 2019</th>
+    </tr>
+    <tr>
+        <th></th>
+        <th>
+            Petra Kvitová
+        </th>
+        <th>
+            Naomi Ósaka
+        </th>
+      </tr>
+    <tr>
+        <td>Sety</td>
+        <td>
+            <span class="smallnum">12</span><br class="smallbr"><span class="bignum">výher</span><br>
+            <span class="sub">0 proher</span>
+          </td>
+          <td>
+              <span class="smallnum">12</span><br class="smallbr"><span class="bignum">výher</span><br>
+              <span class="sub">3 prohry</span>
+        </td>
+    </tr>
+    <tr>
+        <td>Gemy</td>
+        <td>
+            <span class="smallnum">73</span><br class="smallbr"><span class="bignum">vyhraných</span><br>
+            <span class="sub">28 prohraných</span>
+          </td>
+          <td>
+              <span class="smallnum">85</span><br class="smallbr"><span class="bignum">vyhraných</span><br>
+              <span class="sub">54 prohraných</span>
+        </td>
+    </tr>
+    <tr>
+        <td>Míčky</td>
+        <td>
+            <span class="smallnum">376</span><br class="smallbr"><span class="bignum">vyhraných</span><br>
+            <span class="sub">260 prohraných</span>
+          </td>
+          <td>
+              <span class="smallnum">482</span><br class="smallbr"><span class="bignum">vyhraných</span><br>
+              <span class="sub">386 prohraných</span>
+        </td>
+    </tr>
+    <tr>
+        <td>Esa</td>
+        <td class="bignum">26</td>
+        <td class="bignum">50</td>
+    </tr>
+    <tr>
+        <td>Vítězné míče</td>
+        <td class="bignum">157</td>
+        <td class="bignum">226</td>
+    </tr>
+    <tr>
+        <td>Nevynucené chyby</td>
+        <td class="bignum">125</td>
+        <td class="bignum">179</td>
+    </tr>
+  </table>
+</body>
+</html>
