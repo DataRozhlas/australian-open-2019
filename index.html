@@ -1,0 +1,123 @@
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+    label {
+        white-space: nowrap;
+    }
+</style>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+
+
+<div id="container" style="height: 500px; width: 100%; margin: 0 auto"></div>
+<div id="container2" style="height: 500px; width: 100%; margin: 0 auto"></div>
+<script>
+Highcharts.chart('container', {
+    chart: {
+        type: 'line'
+    },
+    title: {
+        text: 'Odměny v Australian Open'
+    },
+    subtitle: {
+        text: 'V miliónech Kč (se zohledněnou inflací)'
+    },
+    credits: {
+        text: "Zdroj: Australian Open",
+        href: "https://ausopen.com/articles/news/record-625-million-prize-money-australian-open-2019"
+    },
+    xAxis: {
+        categories: [2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019]
+    },
+    yAxis: {
+        title: {
+            text: 'Celková výše odměn (milióny Kč)'
+        }
+    },
+    plotOptions: {
+        line: {
+            dataLabels: {
+                enabled: true
+            },
+            enableMouseTracking: false
+        }
+    },
+    colors: ['#ECA038','#A38456','#EA614A','#008836','#20649B','#6B96CA','#A87A93','#D19C95'],
+    legend: {
+        enabled: false
+    },
+    /*
+    2019 62.5       adj 62.5
+    2018 55         adj 55
+    2017 50         adj 51.59
+    2016 44         adj 46.07
+    2015 40         adj 42.59
+    2014 33         adj 35.74
+    2013 30         adj 36.72
+    2012 25         adj 28.43
+    2011 25         adj 29.28
+    2010 24.094     adj 29
+    2009 23.14      adj 28.42
+    2008 20.6       adj 26.2
+    2007 20         adj 26.21
+    2006 19.3       adj 26.1
+    2005 19.1       adj 26.6
+    2004 19         adj 27.1
+    2003 18.18      adj 26.59
+    2002 16.5       adj 24.84
+    2001 13.857     adj 21.52
+    */
+    series: [{
+        name: 'Odměny',
+        data: [346, 399, 428, 436, 428, 420, 421, 421, 457, 466, 470, 457, 590, 575, 685, 740, 829, 884, 1004]
+    }]
+});
+
+Highcharts.chart('container2', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Odměny v grandslamových turnajích'
+    },
+    subtitle: {
+        text: 'V miliónech Kč'
+    },
+    credits: {
+        text: "Zdroj: Total Sportek",
+        href: "https://www.totalsportek.com/money/highest-prize-money-in-tennis-grand-slams/"
+    },
+    xAxis: {
+        categories: ["Australian Open", "French Open", "Wimbledon", "US Open"],
+        title: {
+            text: null
+        }
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Odměny (milióny Kč)'
+        }
+    },
+    plotOptions: {
+        column: {
+            dataLabels: {
+                enabled: true
+            },
+            enableMouseTracking: false
+        }
+    },
+    tooltip: {
+        valueSuffix: ' millions'
+    },
+    colors: ['#EA614A','#008836','#20649B','#6B96CA','#A87A93','#D19C95'],
+    series: [{
+        name: 'Celkem',
+        data: [971, 1087, 1019, 1201]
+    }, {
+        name: 'Vítězky a vítězové dvouhry',
+        data: [72.4, 61.1, 65.9, 86.1]
+    }]
+});
+</script>

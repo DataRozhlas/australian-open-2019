@@ -1,0 +1,1 @@
+Grafy k Australian Open pro Vojtu Mana & redakci
