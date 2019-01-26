@@ -24,8 +24,7 @@ Highcharts.chart('container', {
         text: 'V miliónech Kč (se zohledněnou inflací)'
     },
     credits: {
-        text: "Zdroj: Australian Open",
-        href: "https://ausopen.com/articles/news/record-625-million-prize-money-australian-open-2019"
+        text: "",
     },
     xAxis: {
         categories: [2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019]
@@ -35,19 +34,13 @@ Highcharts.chart('container', {
             text: 'Celková výše odměn (milióny Kč)'
         }
     },
-    plotOptions: {
-        line: {
-            dataLabels: {
-                enabled: true
-            },
-            enableMouseTracking: false
-        }
-    },
     colors: ['#ECA038','#A38456','#EA614A','#008836','#20649B','#6B96CA','#A87A93','#D19C95'],
-    legend: {
-        enabled: false
+    tooltip: {
+        valueSuffix: ' mil. Kč',
+        shared: true
     },
     /*
+    australian open (aud)
     2019 62.5       adj 62.5
     2018 55         adj 55
     2017 50         adj 51.59
@@ -67,10 +60,71 @@ Highcharts.chart('container', {
     2003 18.18      adj 26.59
     2002 16.5       adj 24.84
     2001 13.857     adj 21.52
-    */
+
+    us open (usd)
+    19
+    18  53      adj 53
+    17  50.4    adj 51.5
+    16  46.3    adj 48.3
+    15  42.3    adj 44.4
+    14  38.3    adj 40.5
+    13  34.3    adj 36.8
+    12  25.5    adj 27.9
+    11  23.7    adj 26.7
+    10  23.6    adj 26.9
+    09  22.1    adj 25.9
+    08  21.4    adj 25.1
+    07  20.8    adj 25.5
+    06  19.6    adj 24.6
+    05  19.4    adj 25.1
+    04  18.2    adj 24.3
+    03  17.1    adj 23.3
+    02  16.1    adj 22.5
+    01  15.4    adj 21.8
+
+    wimbledon (gbp)
+    19 
+    18 34       adj 34
+    17 31.6     adj 32.5
+    16 28.1     adj 29.4
+    15 26.75    adj 28.1
+    14 25       adj 26.46
+    13 22.56    adj 24.35
+    12 16.06    adj 17.75
+    11 14.6     adj 16.71
+    10 13.725   adj 16.21
+    09 12.550   adj 15.13
+    08 11.812   adj 14.68
+    07 11.283   adj 14.34
+    06 10.379   adj 13.57
+    05 10.086   adj 13.47
+    04 9.707    adj 13.19
+    03 9.374    adj 12.9
+    02 8.825    adj 12.36
+    01 8.525    adj 12.1
+
+    french open (eur)
+    18 39.197   adj 39.197
+    17 36       adj 36.43
+    16 32.018   adj 32.597
+    15 28.029   adj 28.588
+    14 25.019   adj 25.532
+    13 22       adj 22.61
+    12 18.7     adj 19.474
+    11 17.52    adj 18.694
+*/
     series: [{
-        name: 'Odměny',
-        data: [346, 399, 428, 436, 428, 420, 421, 421, 457, 466, 470, 457, 590, 575, 685, 740, 829, 884, 1004]
+        name: 'Australian Open',
+        data: [346, 400, 428, 436, 428, 420, 422, 422, 457, 467, 471, 458, 591, 575, 685, 741, 831, 885, 1006]
+    }, {
+        name: "US Open",
+        data: [494, 510, 527, 551, 568, 557, 577, 568, 587, 609, 604, 631, 833, 917, 1005, 1093, 1167, 1199]
+    }, {
+        name: "Wimbledon",
+        data: [357, 365, 381, 389, 397, 400, 423, 433, 446, 478, 493, 524, 718, 781, 829, 867, 959, 1003]
+    }, {
+        name: "French Open",
+        data: [null, null, null, null, null, null, null, null, null, null, 480, 500, 580, 655, 734, 837, 935, 1006]
     }]
 });
 
@@ -79,7 +133,7 @@ Highcharts.chart('container2', {
         type: 'column'
     },
     title: {
-        text: 'Odměny v grandslamových turnajích'
+        text: 'Odměny na grandslamových turnajích v r'
     },
     subtitle: {
         text: 'V miliónech Kč'
@@ -109,7 +163,7 @@ Highcharts.chart('container2', {
         }
     },
     tooltip: {
-        valueSuffix: ' millions'
+        valueSuffix: ' mil. Kč'
     },
     colors: ['#EA614A','#008836','#20649B','#6B96CA','#A87A93','#D19C95'],
     series: [{
